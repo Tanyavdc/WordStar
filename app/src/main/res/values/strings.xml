@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WordStar</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="quote1">"\"Japanese Poem \n of seventeen syllables \n five, seven and five\""</string>
+    <string name="quote2">"\"Space is limited \n in a haiku, so it's hard \n to finish what you\""</string>
+    <string name="quote3">"\"Haikus are easy \n but sometimes they don't make sense \n refrigerator.\""</string>
+</resources>

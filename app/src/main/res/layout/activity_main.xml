@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/main"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/haikuInput"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:nextFocusUp="@id/haikuInput"
+        android:nextFocusLeft="@id/haikuInput"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#ffff7980"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/syllCount"
+        android:layout_alignBottom="@+id/haikuInput"
+        android:layout_toRightOf="@+id/haikuInput"
+        android:layout_toEndOf="@+id/haikuInput" />
+
+    <ScrollView
+        android:layout_height="130dp"
+        android:layout_width="match_parent"
+        android:id="@+id/haikuContainer"
+        android:layout_below="@+id/haikuInput"
+        android:layout_marginTop="5dp"
+
+        >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/paper"
+
+
+           >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/line1"
+            android:textSize="20dp"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=""
+            android:id="@+id/line2"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_below="@+id/line1"
+            android:layout_alignLeft="@+id/line1"
+            android:layout_alignStart="@+id/line1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:textSize="25dp"
+            android:id="@+id/line3"
+            android:layout_below="@+id/line2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="37dp"
+            android:layout_marginEnd="37dp" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You have published your Haiku"
+        android:id="@+id/confirmation"
+        android:layout_toLeftOf="@+id/publish"
+        android:layout_centerHorizontal="true"
+
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/countDown"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:paddingRight="5dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/timer"
+
+        android:paddingTop="10dp"
+        android:background="@drawable/clock"
+
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/countDown"
+        android:layout_toEndOf="@+id/countDown" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="STARWORD"
+        android:layout_marginTop="15dp"
+        android:id="@+id/starWord"
+        android:layout_above="@id/countDown"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/starCount"
+        android:layout_alignTop="@+id/starWord"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/blueStar"
+        android:background="@drawable/star"
+        android:layout_alignBottom="@+id/starCount"
+        android:layout_alignRight="@+id/haikuContainer"
+        android:layout_alignEnd="@+id/haikuContainer"
+        android:layout_marginRight="20dp"/>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/refresh"
+        android:background="@drawable/refresh"
+        android:layout_alignBottom="@+id/starWord"
+        android:layout_toRightOf="@+id/starWord"
+        android:layout_marginLeft="10dp"
+
+        />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/goldStar"
+        android:background="@drawable/goldstar"
+
+        android:layout_below="@+id/blueStar"
+        android:layout_alignRight="@+id/haikuContainer"
+        android:layout_alignEnd="@+id/haikuContainer"
+        android:layout_marginRight="20dp"/>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/copy"
+        android:background="@drawable/copy"
+        android:layout_alignBottom="@+id/syllCount"
+        android:layout_toRightOf="@+id/syllCount"
+        android:layout_toEndOf="@+id/syllCount" />
+
+
+
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publish"
+        android:layout_below="@id/haikuContainer"
+        android:id="@+id/publish"
+        android:layout_marginTop="5dp"
+
+
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="SCRAP IT"
+        android:id="@+id/scrap"
+        android:layout_below="@id/publish"
+
+        android:layout_alignLeft="@+id/publish"
+        android:layout_alignStart="@+id/publish" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quote"
+        android:layout_centerHorizontal="true"
+        android:text="@string/quote1"
+        android:layout_below="@id/haikuContainer"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="25dp">
+
+    </TextView>
+
+
+</RelativeLayout>
